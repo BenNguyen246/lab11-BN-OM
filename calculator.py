@@ -1,5 +1,6 @@
 import math
 
+
 def add(a, b):
     return a + b
 
@@ -21,3 +22,22 @@ def log(a, b):
 
 def exp(a, b):
     return a ** b
+
+
+def subtract(a, b):
+    return a - b
+
+
+def multiply(a, b):
+    return a * b
+
+
+def logarithm(a, b):
+    if a <= 1 or b <= 0:
+        raise ValueError("Error: a must be greater that 1 and b must be greater than 0")
+    return math.log(a, b)
+
+
+def exponent(a, b):
+    return a**b
+
