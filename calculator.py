@@ -1,3 +1,7 @@
+# Partner 1: Ben Nguyen
+# Partner 2: Orlando Moreno
+# https://github.com/BenNguyen246/lab11-BN-OM.git
+
 import math
 
 
