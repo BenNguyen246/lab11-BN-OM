@@ -1,37 +1,30 @@
+# https://github.com/BenNguyen246/lab11-BN-OM.git
 # Partner 1: Ben Nguyen
 # Partner 2: Orlando Moreno
-# https://github.com/BenNguyen246/lab11-BN-OM.git
 
 import unittest
 import calculator
-
 
 class TestCalculator(unittest.TestCase):
 
     def test_add(self):
         self.assertEqual(calculator.add(6, 9), 15)
-
         self.assertEqual(calculator.add(-420, 420), 0)
 
     def test_subtract(self):
         self.assertEqual(calculator.subtract(5, 2), 3)
-
-        self.assertEqual(calculator.sub(5, 2), 3)
+        self.assertEqual(calculator.subtract(50, 20), 30)
 
     def test_divide_by_zero(self):
         with self.assertRaises(ZeroDivisionError):
             calculator.div(2025, 0)
 
     def test_logarithm(self):
-        self.assertAlmostEqual(calculator.logarithm(2, 8), 1 / 3)
-
-        self.assertEqual(calculator.log(2, 8), 3)
+        self.assertEqual(calculator.logarithm(2, 8), 3)
 
     def test_log_invalid_base(self):
         with self.assertRaises(ValueError):
             calculator.logarithm(1, 10)
-        with self.assertRaises(ValueError):
-            calculator.log(1, 10)
 
     def test_multiply(self):
         self.assertEqual(calculator.mul(2, 5), 10)
@@ -53,10 +46,10 @@ class TestCalculator(unittest.TestCase):
 
     def test_sqrt(self):
         self.assertEqual(calculator.square_root(4), 2)
-
+        self.assertEqual(calculator.square_root(0), 0)
         with self.assertRaises(ValueError):
-            calculator.square_root(0)
-
+            calculator.square_root(-1)
 
 if __name__ == "__main__":
     unittest.main()
+

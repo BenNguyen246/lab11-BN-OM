@@ -1,6 +1,7 @@
+# https://github.com/BenNguyen246/lab11-BN-OM.git
 # Partner 1: Ben Nguyen
 # Partner 2: Orlando Moreno
-# https://github.com/BenNguyen246/lab11-BN-OM.git
+
 
 import math
 
@@ -40,4 +41,4 @@ def subtract(a, b):
 def logarithm(a, b):
     if a == 1 or a <= 0 or b <= 0:
         raise ValueError("Error: a must be greater that 1 and b must be greater than 0")
-    return math.log(a, b)
+    return math.log(b, a)
